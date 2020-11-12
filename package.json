@@ -5,11 +5,24 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "mock": "json-server -w db.json -p 4200 -d 2000",
+    "serve": "concurrently \"npm run dev\" \"npm run mock\""
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "next": "10.0.1",
+    "nextjs-progressbar": "0.0.7",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "sass": "^1.29.0"
+  },
+  "devDependencies": {
+    "@types/next-nprogress": "^1.4.0",
+    "@types/node": "^14.14.7",
+    "@types/react": "^16.9.56",
+    "concurrently": "^5.3.0",
+    "json-server": "^0.16.2",
+    "typescript": "^4.0.5"
   }
 }
